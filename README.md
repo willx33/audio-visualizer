@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Audio Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I built this audio visualizer app because I wanted a fun way to see music and sound come to life. It captures your microphone input and shows real-time visuals that dance to whatever you're hearing.
 
-## Available Scripts
+![Audio Visualizer Demo](https://via.placeholder.com/800x400.png?text=Audio+Visualizer+Demo)
 
-In the project directory, you can run:
+## What's cool about it
 
-### `npm start`
+- Four different visualizer styles:
+  - Frequency bars (the classic equalizer look)
+  - Waveform (shows the actual sound wave)
+  - Circular (trippy circular patterns)
+  - Particles (floating particles that react to sound)
+- You can tweak settings for each visualizer
+- Clean, dark interface that lets the visuals shine
+- Everything happens in your browser - no data gets sent anywhere
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Get it running
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You'll need:
+- Node.js
+- npm or yarn
 
-### `npm test`
+Just do:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repo
+```bash
+git clone https://github.com/yourusername/audio-visualizer.git
+cd audio-visualizer
+```
 
-### `npm run build`
+2. Install stuff
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Fire it up
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Go to [http://localhost:3000](http://localhost:3000) in your browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use it
 
-### `npm run eject`
+1. Click "Connect Microphone" (you'll need to give permission)
+2. Pick a visualizer style from the tabs
+3. Play with the settings if you want
+4. Make some noise! Try speaking, playing music, or anything that makes sound
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Privacy stuff
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This app doesn't record or send your audio anywhere. All processing happens right in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech I used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React 19
+- TypeScript
+- Web Audio API (for grabbing and analyzing sound)
+- Canvas (for drawing the visuals)
+- Styled Components
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MIT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Thanks
+
+Big thanks to Web Audio API for making this possible without any server-side processing.
+
+---
+
+Started with Create React App because who wants to set up webpack from scratch?

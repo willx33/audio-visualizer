@@ -1,13 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Toggle switch styling */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #888;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle input:checked + .slider {
+  background-color: rgba(98, 0, 238, 0.4);
+}
+
+.toggle input:checked + .slider:before {
+  background-color: #6200ee;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.toggle .slider.round {
+  border-radius: 24px;
+}
+
+.toggle .slider.round:before {
+  border-radius: 50%;
+}
+
+/* Color input styling */
+.color-input {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.color-input::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* Select input styling */
+.select-input {
+  background-color: rgba(30, 30, 30, 0.8);
+  color: #f5f5f5;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+
+.select-input:focus {
+  border-color: #6200ee;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.button-group .button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.fft-settings {
+  background-color: rgba(18, 18, 18, 0.8);
+  padding: 12px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+/* Update control panel to match the design */
+.control-panel h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--secondary);
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
 }
