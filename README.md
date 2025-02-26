@@ -1,6 +1,6 @@
 # Audio Visualizer
 
-I built this audio visualizer app because I wanted a fun way to see music and sound come to life. It captures your microphone input and shows real-time visuals that dance to whatever you're hearing.
+I built this audio visualizer app because I wanted a fun way to see music and sound come to life.
 
 ## Features
 
